@@ -8,21 +8,21 @@ import { ServicesService } from "../services.service";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  tipos: Tipo[];
-  ordens: Ordem[];
+  tipos: Tipo[] = [];
+  ordens: Ordem[] = [];
 
   constructor(private serv: ServicesService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getall();
+  }
 
   getall() {
-    console.log("Parabéns esse botão funciona!");
-
-    this.serv.getallOrdem().subscribe(resp => {
-      resp = this.ordens;
+    this.serv.getallOrdem().subscribe(ordem => {
+      this.ordens = ordem;
     });
-    this.serv.getallTipos().subscribe(resp => {
-      resp = this.tipos;
+    this.serv.getallTipos().subscribe(tipo => {
+      this.tipos = tipo;
     });
   }
 }

@@ -1,5 +1,7 @@
-<div>
-  <button style="float: right" (click)="getall()">Atualizar</button>
+<div style="margin: 50px 150px 20px;">
+  <button style="float: right; margin: 10px;" (click)="getall()">
+    Atualizar
+  </button>
   <div>
     <h3>Tipo</h3>
     <table>
@@ -9,7 +11,7 @@
       </tr>
       <tr style="text-align: center;" *ngFor="let tipo of tipos">
         <td>{{ tipo.id }}</td>
-        <td>{{ tipo.descricao }}</td>
+        <td>{{ tipo.desc }}</td>
         <td>
           <button style="margin: 10px;">Editar</button>
         </td>
@@ -33,9 +35,9 @@
       <tr style="text-align: center; margin: 5px;" *ngFor="let ordem of ordens">
         <td>{{ ordem.id }}</td>
         <td>{{ ordem.data }}</td>
-        <td>{{ ordem.cliente }}</td>
+        <td>{{ ordem.client }}</td>
         <td>{{ ordem.valor }}</td>
-        <td>{{ ordem.descricao }}</td>
+        <td>{{ ordem.desc }}</td>
         <td>{{ ordem.status }}</td>
         <td>
           <button style="margin: 10px;">Editar</button>
