@@ -1,11 +1,11 @@
 export class Tipo {
   id: number;
-  desccricao: string;
+  descricao: string;
 }
 export class Ordem {
   id: number;
-  data: Date;
-  client: string;
+  date: Date;
+  cliente: string;
   valor: number;
   descricao: string;
   status: string;
