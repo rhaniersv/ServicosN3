@@ -1,20 +1,19 @@
-import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http'
-
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
-
 export class ServicesService {
+  api = "http://localhost:8080";
 
-  constructor( http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  ngOnInit(){
-
+  getallTipos() {
+    return this.http.get(`${this.api}/tipo`);
   }
 
-  getAll(){
-    return this.http.get()
+  getallOrdem() {
+    return this.http.get(`${this.api}/ordem`);
   }
 }

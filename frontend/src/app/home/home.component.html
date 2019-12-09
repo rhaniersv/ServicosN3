@@ -1,47 +1,49 @@
 <div>
-  <h3>Tipo</h3>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Descrição</th>
-    </tr>
-    <tr style="text-align: center;">
-      <td></td>
-      <td></td>
-      <td>
-        <button style="margin: 10px;">Editar</button>
-      </td>
-      <td>
-        <button style="margin: 10px;">Excluir</button>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div>
-  <h3>Ordem</h3>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Data</th>
-      <th>Cliente</th>
-      <th>Valor</th>
-      <th>Descrição</th>
-      <th>Status</th>
-    </tr>
-    <tr style="text-align: center;">
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>
-        <button style="margin: 10px;">Editar</button>
-      </td>
-      <td>
-        <button style="margin: 10px;">Excluir</button>
-      </td>
-    </tr>
-  </table>
+  <button style="float: right" (click)="getall()">Atualizar</button>
+  <div>
+    <h3>Tipo</h3>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Descrição</th>
+      </tr>
+      <tr style="text-align: center;" *ngFor="let tipo of tipos">
+        <td>{{ tipo.id }}</td>
+        <td>{{ tipo.descricao }}</td>
+        <td>
+          <button style="margin: 10px;">Editar</button>
+        </td>
+        <td>
+          <button style="margin: 10px;">Excluir</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h3>Ordem</h3>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Data</th>
+        <th>Cliente</th>
+        <th>Valor</th>
+        <th>Descrição</th>
+        <th>Status</th>
+      </tr>
+      <tr style="text-align: center; margin: 5px;" *ngFor="let ordem of ordens">
+        <td>{{ ordem.id }}</td>
+        <td>{{ ordem.data }}</td>
+        <td>{{ ordem.cliente }}</td>
+        <td>{{ ordem.valor }}</td>
+        <td>{{ ordem.descricao }}</td>
+        <td>{{ ordem.status }}</td>
+        <td>
+          <button style="margin: 10px;">Editar</button>
+        </td>
+        <td>
+          <button style="margin: 10px;">Excluir</button>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
