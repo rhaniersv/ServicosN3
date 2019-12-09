@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { Tipo, Ordem } from "./model";
 
 @Injectable({
   providedIn: "root"
@@ -10,10 +11,10 @@ export class ServicesService {
   constructor(private http: HttpClient) {}
 
   getallTipos() {
-    return this.http.get(`${this.api}/tipo`);
+    return this.http.get<Tipo[]>(`${this.api}/tipo`);
   }
 
   getallOrdem() {
-    return this.http.get(`${this.api}/ordem`);
+    return this.http.get<Ordem[]>(`${this.api}/ordem`);
   }
 }
