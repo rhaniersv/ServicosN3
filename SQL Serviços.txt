@@ -1,0 +1,13 @@
+CREATE TABLE ordem (serv_id int GENERATED ALWAYS AS IDENTITY,
+					serv_data date,
+					serv_cliente varchar,
+					serv_valor float,
+					serv_desc varchar,
+				    serv_status varchar);
+
+CREATE TABLE tipo (serv_id int GENERATED ALWAYS AS IDENTITY,
+					serv_desc varchar);
+
+
+Select * from tipo;
+Select * from ordem
